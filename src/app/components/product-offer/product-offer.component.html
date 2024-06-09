@@ -1,0 +1,71 @@
+<div
+  class="relative w-full flex flex-col shadow-sm bg-white px-8 py-4 rounded-[10px]"
+>
+  <div
+    class="flex lg:justify-between flex-col lg:flex-row lg:pl-[28px] lg:pt-[28px] pt-[18px] lg:h-[380px] h-[390px] lg:gap-4 lg:text-start text-center"
+  >
+    <div class="flex flex-col justify-start">
+      <div
+        class="hidden lg:block max-w-[360px] p-2 text-sm text-white bg-[#ec0000] rounded"
+      >
+        <p>Solução ideal para quem fatura acima de {{ invoiceOver }}</p>
+      </div>
+
+      <p class="text-[1.5rem] font-medium lg:pt-[24px] text-[#ec0000]">
+        {{ title }}
+      </p>
+
+      <p class="text-[#66707a] font-medium pt-3">Aluguel</p>
+      <p class="text-[32px] font-medium">{{ rent }}</p>
+    </div>
+
+    <div class="flex items-center justify-center">
+      <img
+        class="h-[200px] lg:h-[340px] object-contain"
+        src="{{ image }}"
+        alt="Imagem da máquina de cartão da Getnet"
+      />
+    </div>
+
+    <div class="hidden lg:flex pl-4 justify-start items-start">
+      <div class="flex flex-col gap-4">
+        <div>
+          <p class="text-[1.25rem] font-medium text-[#ec0000]">{{ title }}</p>
+          <p class="text-sm">{{ description }}</p>
+        </div>
+
+        <div>
+          <p class="text-[1.25rem] font-medium text-[#ec0000]">
+            Get Pay (Grátis)
+          </p>
+          <p class="text-sm">{{ getPay }}</p>
+        </div>
+
+        <div>
+          <p class="text-[1.25rem] font-medium text-[#ec0000]">
+            Condição especial
+          </p>
+          <div
+            class="text-sm max-w-[300px]"
+            [innerHTML]="specialCondition"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full border-b"></div>
+
+  <div class="w-full flex flex-col lg:flex-row items-center justify-end mt-4">
+    <button
+      class="w-full lg:w-[200px] py-2 text-sm text-[#ec0000] hover:text-[#d81212] transition-colors"
+    >
+      MAIS DETALHES
+    </button>
+    <button
+      class="w-full lg:w-[200px] py-2 text-sm text-white bg-[#ec0000] hover:bg-[#d81212] transition-colors rounded-full"
+    >
+      ADICIONAR
+    </button>
+  </div>
+</div>
